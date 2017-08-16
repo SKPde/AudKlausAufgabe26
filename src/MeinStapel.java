@@ -17,7 +17,10 @@ public class MeinStapel implements Stapel {
 	@Override
 	public Wert runter() {
 		// TODO Auto-generated method stub
-		return null;
+		Wert temp = oben;
+		oben = temp.next;
+		temp.next = null;
+		return temp;
 	}
 
 	public void ausgabe() {
